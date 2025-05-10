@@ -23,6 +23,26 @@ npm install
 
 # Configure o banco de dados em:
 # db/connection.js
+```
+const knex = require("knex");
+
+const conn = knex({
+    client: "mysql2",  
+    connection: {
+        host: "localhost",
+        user: "root",  
+        password: "Sucode@1",  
+        database: "sistema_produtos",
+        port: 3306
+    },
+    pool: {
+        min: 2,
+        max: 10
+    }
+});
+```
+
+module.exports = conn;
 
 # Inicie o servidor
 ```
