@@ -1,0 +1,18 @@
+{
+  "name": "lojinha-api",
+  "version": "1.0.0",
+  "description": "API da lojinha usando Restify",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "knex": "^3.1.0",
+    "mysql2": "^3.14.1",
+    "restify": "^11.1.0",
+    "restify-errors": "^8.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}
