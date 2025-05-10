@@ -11,18 +11,23 @@ API RESTful para gerenciamento de produtos desenvolvida com Node.js, Restify e M
 
 ## ⚙️ Instalação
 
-```bash
-# Clone o repositório
-git clone https://github.com/KauanGPDS/Projeto-A1-Faculdade-Criando-Ap1-De-Produto.git
 
+# Clone o repositório
+```
+git clone https://github.com/KauanGPDS/Projeto-A1-Faculdade-Criando-Ap1-De-Produto.git
+```
 # Instale as dependências
+```
 npm install
+```
 
 # Configure o banco de dados em:
 # db/connection.js
 
 # Inicie o servidor
+```
 npm start
+```
 
 # 📂 Estrutura do Projeto
 src/
@@ -50,16 +55,16 @@ src/
 ## 📝 Exemplos de Uso
 
 ### Criar produto (POST /produto)
-``
+```
 {
   "nome": "Smartphone Samsung",
   "descricao": "Galaxy S23 128GB",
   "preco": 3999.99,
   "quantidade_estoque": 15
 }
-``
+```
 ### Resposta (GET /produto/1)
-``
+```
 
 {
   "idProd": 1,
@@ -70,12 +75,12 @@ src/
   "data_criacao": "2023-05-20T10:00:00.000Z",
   "data_atualizacao": "2023-05-20T10:00:00.000Z"
 }
-``
+```
 
 ## 🔍 Detalhes da Implementação MVC
 
 ### Model (produtoModel.js)
-``
+```
 const db = require("../db/conection.js");
 
 module.exports = {
@@ -85,9 +90,9 @@ module.exports = {
     update: (id, produto) => db("produtos").where("idProd", id).update(produto),
     remove: (id) => db("produtos").where("idProd", id).del()
 };
-``
+```
 ### Controller (produtoController.js)
-``
+```
 const errors = require("restify-errors");
 const Produto = require("../models/produtoModel.js");
 
@@ -102,10 +107,10 @@ module.exports = {
     },
     // ... outros métodos
 };
-``
+```
 ###Routes (produtoRoutes.js)
 
-``
+```
 const controller = require("../controllers/produtoController");
 
 module.exports = (server) => {
@@ -115,7 +120,7 @@ module.exports = (server) => {
     server.put("/produto/:idProd", controller.update);
     server.del("/produto/:idProd", controller.remove);
 };
-``
+```
 
 ## Aluno
 
