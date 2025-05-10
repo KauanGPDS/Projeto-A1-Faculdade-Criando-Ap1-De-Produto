@@ -40,10 +40,23 @@ const conn = knex({
         max: 10
     }
 });
-```
+
 
 module.exports = conn;
+```
+## 📌 Ficha-Resumo: Padrão MVC
 
+### 🔍 Definição
+MVC (Model-View-Controller) é um padrão arquitetural que separa a aplicação em três componentes principais:
+- **Model**: Gerencia dados e regras de negócio
+- **View**: Responsável pela apresentação (JSON em APIs REST)
+- **Controller**: Intermediário que processa requisições
+
+### ✅ Vantagens
+- Separação clara de responsabilidades
+- Facilidade de manutenção
+- Código mais organizado
+- Melhor testabilidade
 # Inicie o servidor
 ```
 npm start
